@@ -1,0 +1,31 @@
+<project name="opensub4j" basedir="." default="jar">
+
+	<property name="bin.dir" location="bin" />
+	<property name="src.dir" location="src/main/java" />
+	<property name="lib.dir" location="lib" />
+	
+	<target name="clean" description="clean">
+	    <delete dir="${bin.dir}" />
+	    <mkdir dir="${bin.dir}" />
+	</target>
+
+	<echo>${lib.dir}</echo>
+	<echo>${bin.dir}</echo>
+	<echo>${src.dir}</echo>
+	
+	<target name="compile" depends="clean">
+	    <javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false">
+	        <classpath>
+	        	<path id="mypath">
+	           		<fileset dir="${lib.dir}">
+	              		<include name="*.jar" />
+	            	</fileset>
+	        	</path>
+	        </classpath>
+	    </javac>	
+	</target>
+
+	<target name="jar" depends="compile">
+	    <jar destfile="opensub4j.jar" basedir="${bin.dir}" />
+	</target>
+</project>
