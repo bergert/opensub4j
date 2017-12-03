@@ -19,7 +19,8 @@ import java.util.Map;
 
 abstract class AbstractOperation<T> implements Operation<T> {
 
-    @Override
+    @SuppressWarnings("rawtypes")
+	@Override
     public T execute(XmlRpcClient client, ResponseParser parser) throws XmlRpcException {
         Object response = client.execute(getMethodName(), getParams());
         return parser.bind(getResponseObject(), (Map) response);

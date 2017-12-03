@@ -14,6 +14,7 @@ package com.github.wtekiela.opensub4j.response;
 
 import java.lang.annotation.*;
 
+@SuppressWarnings("javadoc")
 @Target(value = ElementType.FIELD)
 @Retention(value = RetentionPolicy.RUNTIME)
 @Inherited

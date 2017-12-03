@@ -21,7 +21,8 @@ import java.util.Map;
 
 abstract class ListOperation<T> implements Operation<List<T>> {
 
-    @Override
+    @SuppressWarnings({"unchecked", "rawtypes"})
+	@Override
     public List<T> execute(XmlRpcClient client, ResponseParser parser) throws XmlRpcException {
         Object response = client.execute(getMethodName(), getParams());
         try {

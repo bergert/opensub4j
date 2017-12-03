@@ -16,15 +16,16 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.concurrent.Callable;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("javadoc")
 public class RetriableXmlRpcClient extends XmlRpcClient {
 
-    private final Logger logger = LoggerFactory.getLogger(RetriableXmlRpcClient.class);
+    private final Logger logger = LogManager.getLogger();
 
     private final int maxAttempts;
     private final long interval;

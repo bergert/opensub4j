@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
+@SuppressWarnings("javadoc")
 public class SubtitleFile {
 
     public static final int BUFFER_SIZE = 10240;

@@ -12,6 +12,7 @@
  */
 package com.github.wtekiela.opensub4j.response;
 
+@SuppressWarnings("javadoc")
 public class Response {
 
     @OpenSubtitlesApiSpec(fieldName = "status")

@@ -12,6 +12,7 @@
  */
 package com.github.wtekiela.opensub4j.response;
 
+@SuppressWarnings("javadoc")
 public class ResponseStatus {
 
     public static final ResponseStatus OK = new ResponseStatus("200 OK");

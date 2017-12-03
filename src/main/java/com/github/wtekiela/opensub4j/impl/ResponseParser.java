@@ -20,11 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@SuppressWarnings("rawtypes")
 class ResponseParser {
 
     public static final String LIST_DATA_KEY = "data";
 
-    public <T> List<T> bindList(Class<T> clazz, Map<String, Object[]> response) throws InstantiationException, IllegalAccessException {
+	public <T> List<T> bindList(Class<T> clazz, Map<String, Object[]> response) throws InstantiationException, IllegalAccessException {
         Object[] rawData = response.get(LIST_DATA_KEY);
         List<T> list = new ArrayList<>(rawData.length);
         for (Object obj : rawData) {
@@ -103,7 +104,8 @@ class ResponseParser {
         }
     }
 
-    private Object customObjectFromString(Class target, String value) {
+    @SuppressWarnings("unchecked")
+	private Object customObjectFromString(Class target, String value) {
         try {
             return target.getConstructor(String.class).newInstance(value);
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException | InstantiationException e) {

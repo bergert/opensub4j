@@ -20,11 +20,13 @@ import java.util.List;
 import com.github.wtekiela.opensub4j.api.OpenSubtitlesClient;
 import com.github.wtekiela.opensub4j.response.*;
 import com.github.wtekiela.opensub4j.xmlrpc.client.RetriableXmlRpcClient;
+
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 
 import com.github.wtekiela.opensub4j.api.FileHashCalculator;
 
+@SuppressWarnings("javadoc")
 public class OpenSubtitlesClientImpl implements OpenSubtitlesClient {
 
     private final XmlRpcClient xmlRpcClient;

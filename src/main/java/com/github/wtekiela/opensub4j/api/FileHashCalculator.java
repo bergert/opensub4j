@@ -15,6 +15,7 @@ package com.github.wtekiela.opensub4j.api;
 import java.io.File;
 import java.io.IOException;
 
+@SuppressWarnings("javadoc")
 public interface FileHashCalculator {
 
     String calculateHash(File file) throws IOException;

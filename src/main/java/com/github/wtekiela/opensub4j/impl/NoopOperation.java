@@ -12,6 +12,7 @@
  */
 package com.github.wtekiela.opensub4j.impl;
 
+@SuppressWarnings("rawtypes")
 class NoopOperation extends AbstractOperation {
 
     private String loginToken;

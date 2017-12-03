@@ -43,7 +43,8 @@ public class OpenSubtitlesFileHashCalculator implements FileHashCalculator {
      * @throws java.io.IOException           If some other I/O error occurs
      */
     public String calculateHash(File file) throws IOException {
-        try (FileChannel fileChannel = new FileInputStream(file).getChannel()) {
+        try (@SuppressWarnings("resource")
+		FileChannel fileChannel = new FileInputStream(file).getChannel()) {
             long size = file.length();
 
             long chunkSize = Math.min(HASH_CHUNK_SIZE, size);
