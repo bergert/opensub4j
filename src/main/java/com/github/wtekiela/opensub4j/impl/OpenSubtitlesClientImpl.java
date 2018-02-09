@@ -150,4 +150,8 @@ public class OpenSubtitlesClientImpl implements OpenSubtitlesClient {
                 .execute(xmlRpcClient, responseParser);
     }
 
+	@Override
+	public boolean isLoggedIn() {
+		return (loginToken != null);
+	}
 }

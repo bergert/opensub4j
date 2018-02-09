@@ -88,24 +88,22 @@ public class SubtitleInfo {
     private String subFormat;
 
 	@OpenSubtitlesApiSpec(fieldName = "SubActualCD")
-    private String subactualCDs;
+    private int subactualCDs;
     
     @OpenSubtitlesApiSpec(fieldName = "MovieReleaseName")
     private String movieReleaseName;
     
     @OpenSubtitlesApiSpec(fieldName = "SubHearingImpaired")
-    private String subHearingImpaired;
+    private int subHearingImpaired;
     
     @OpenSubtitlesApiSpec(fieldName = "SubHD")
-    private String subHD;
+    private int subHD;
     
     @OpenSubtitlesApiSpec(fieldName = "MovieFPS")
-    private String movieFPS;
+    private Double movieFPS;
     
     @OpenSubtitlesApiSpec(fieldName = "SeriesEpisode")
-    private String seriesEpisode;
-    
-    
+    private int seriesEpisode; 
 
     /**
      * 
@@ -186,22 +184,25 @@ public class SubtitleInfo {
 		return movieReleaseName;
 	}
 
-	public String getSubHearingImpaired() {
+	public int getSubHearingImpaired() {
 		return subHearingImpaired;
 	}
 
-	public String getSubHD() {
+	public int getSubHD() {
 		return subHD;
 	}
 
-	public String getMovieFPS() {
+	public Double getMovieFPS() {
 		return movieFPS;
 	}
 
-	public String getSeriesEpisode() {
+	public int getSeriesEpisode() {
 		return seriesEpisode;
 	}
-
+	public int getSubactualCDs() {
+		return subactualCDs;
+	}
+	
     @Override
     public String toString() {
         return "SubtitleInfo{" +

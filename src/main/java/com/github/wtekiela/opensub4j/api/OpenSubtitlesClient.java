@@ -187,4 +187,9 @@ public interface OpenSubtitlesClient {
      */
     List<MovieInfo> searchMoviesOnImdb(String query) throws XmlRpcException;
 
+	/**
+	 * @return TRUE if logged in
+	 */
+	boolean isLoggedIn();
+
 }
