@@ -71,7 +71,7 @@ class ResponseParser {
         try {
             set(target, value, instance, field);
         } catch (IllegalAccessException e) {
-            // @todo log warning
+    		// nothing here
         }
     }
 

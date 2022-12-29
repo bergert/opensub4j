@@ -12,7 +12,6 @@
  */
 package com.github.wtekiela.opensub4j.response;
 
-@SuppressWarnings("javadoc")
 public class LoginToken {
 
     @OpenSubtitlesApiSpec(fieldName = "token")
